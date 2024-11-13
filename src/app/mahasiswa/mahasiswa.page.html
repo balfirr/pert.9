@@ -16,6 +16,8 @@
       <ion-label>
         {{item.nama}}
         <p>{{item.jurusan}}</p>
+        <ion-button color="danger" slot="end" (click)="hapusMahasiswa(item.id)">Hapus</ion-button>
+        <ion-button expand="block" (click)="openModalEdit(true,item.id)">Edit</ion-button>
       </ion-label>
     </ion-item>
   </ion-card>
@@ -58,10 +60,6 @@
   </ng-template>
 </ion-modal>
 
-<ion-button color="danger" slot="end" (click)="hapusMahasiswa(item.id)">Hapus</ion-button>
-
-<ion-button expand="block" (click)="openModalEdit(true,item.id)">Edit</ion-button>
-
 <!-- ini untuk modal edit -->
 <ion-modal [isOpen]="modalEdit" (ionModalDidDismiss)="cancel()">
   <ng-template>
@@ -96,5 +94,7 @@
     </ion-content>
   </ng-template>
 </ion-modal>
+
+
 
 

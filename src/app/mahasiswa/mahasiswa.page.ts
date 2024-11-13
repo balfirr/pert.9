@@ -28,6 +28,7 @@ export class MahasiswaPage implements OnInit {
   }
 
   modalTambah: any;
+  modal: any;
   id: any;
   nama: any;
   jurusan: any;
@@ -139,8 +140,6 @@ export class MahasiswaPage implements OnInit {
       })
   }
 
-
-
-
-
 }
+
+
